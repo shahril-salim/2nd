@@ -1,0 +1,28 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int stairs;
+    
+    do
+    {
+        stairs = get_int("Enter a digit between 1 and 8: ");
+    }
+    while (stairs < 1 || stairs > 8);
+    printf("You have choosen: %i\n",stairs);
+    int i;
+    
+    for (i= 0; i <= stairs; i++)
+    {
+            for (int n= stairs; n >i;n--)//or for (int n= 0; n <stairs-i;n++)
+            {
+                printf(" ");
+            }
+            for (int j=0; j < i;j++)
+            {    
+              printf("#");   
+            }  
+       printf("\n");
+    }
+}
